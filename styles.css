@@ -1,0 +1,83 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    font-family: sans-serif;
+}
+
+.body {
+    background-color:#77878b;
+ 
+}
+html {
+    scroll-behavior: smooth;
+}
+.header {
+    /* Figure out how to flex this so it stays in the same box*/
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: inline-block;
+    background-color: #305252;
+    width: 100%;
+    height: 100px;
+    max-height: 200px;
+    position:fixed;
+    top: 0;
+    color: white;
+    size: 100px;
+}
+.header h1 {
+    display: inline-block;
+    font-size: 34x;
+    margin-top: 28px;
+    margin-left: 20px;
+}
+
+ .header nav { 
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+    padding-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:center;
+} 
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+.nav-anchor-utility {
+    height:100px;
+    overflow-anchor: ;
+}
+
+.about-me-section {
+    margin-left: 40px;
+    
+   
+}
+.about-me-section img{
+    max-height: 300px;
+    padding:20px;
+    
+}
+
+.about-me-section img:active {
+    -webkit-transform: scale(2,2);
+    position: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+    }

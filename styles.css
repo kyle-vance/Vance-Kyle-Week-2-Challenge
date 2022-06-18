@@ -55,29 +55,51 @@ a {
     text-decoration: none;
     color: white;
 }
+/*Utility to anchor the nav links to the header. There may be a better way to accomplish this but this worked. I didn't like that it forced 200 pixels into the web page but it looks fine as is. */
 .nav-anchor-utility {
     height:100px;
-    overflow-anchor: ;
 }
-
+/*About Me Section*/
 .about-me-section {
     margin-left: 40px;
-    
-   
 }
+
 .about-me-section img{
     max-height: 300px;
-    padding:20px;
-    
+    padding: 20px;
 }
 
 .about-me-section img:active {
     -webkit-transform: scale(2,2);
-    position: center;
+    transform: scale(2, 2);
+  }
+/*Projects Section*/
+.horiseon-container {
+    display: block;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    border:5px;
+    border-color: #488286;
+    border-style:solid;
+    position: relative;
   }
 
-  @media screen and (max-width: 768px) {
-    main,
-    nav {
-      flex-direction: column;
-    }
+.horiseon-container img {
+    max-height: 400px;
+    max-width: 500px;
+    display:block;
+    /* position:absolute; */
+}
+.horiseon-container h3 {
+   
+}
+
+.horiseon-title-card {
+    background-color: #b7d5d4;
+    position: absolute;
+    bottom:20px;
+    left:0;
+    z-index: 2;
+    padding:10px;
+
+}

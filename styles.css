@@ -6,6 +6,7 @@
 
 .body {
     background-color:#77878b;
+    margin-bottom: 100px;
  
 }
 html {
@@ -14,8 +15,8 @@ html {
 .header {
     /* Figure out how to flex this so it stays in the same box*/
     flex-wrap: wrap;
-    flex-direction: column;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     background-color: #305252;
     width: 100%;
     height: 100px;
@@ -24,6 +25,10 @@ html {
     top: 0;
     color: white;
     size: 100px;
+    border:#488286;
+    border-width: 5px;
+    border-style: solid;
+    z-index: 2;
 }
 .header h1 {
     display: inline-block;
@@ -38,7 +43,7 @@ html {
     font-size: 20px;
     padding-top: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align:center;
+    text-align:right;
 } 
 
 .header nav ul {
@@ -61,7 +66,7 @@ a {
 }
 /*About Me Section*/
 .about-me-section {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .about-me-section img{
@@ -74,24 +79,25 @@ a {
     transform: scale(2, 2);
   }
 /*Projects Section*/
+
+.projects-h2{
+    margin-left: 20px;
+}
 .horiseon-container {
-    display: block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     border:5px;
     border-color: #488286;
     border-style:solid;
     position: relative;
+    width: fit-content;
   }
 
 .horiseon-container img {
     max-height: 400px;
     max-width: 500px;
     display:block;
-    /* position:absolute; */
-}
-.horiseon-container h3 {
-   
 }
 
 .horiseon-title-card {
@@ -99,7 +105,45 @@ a {
     position: absolute;
     bottom:20px;
     left:0;
-    z-index: 2;
     padding:10px;
 
 }
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 33%;
+    border:5px;
+    border-color: #488286;
+    border-style:solid;
+    position: relative;
+    width: fit-content;
+}
+
+.portfolio-title-card {
+    background-color: #b7d5d4;
+    position: absolute;
+    bottom:20px;
+    left:0;
+    padding:10px;
+}
+.portfolio-container img {
+    max-height: 300px;
+    max-width: 400px;
+    display:block;
+}
+
+.contact h2{
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      font-size: 20px;
+    }
+  
+    header nav {
+        order: 2;
+      }
+    }
+  

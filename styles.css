@@ -5,7 +5,7 @@
 
 .body {
     background-color:#77878b;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     padding-left: 0px;
     border-style: inset;
     border-color:#305252;
@@ -18,7 +18,7 @@ html {
 }
 .header {
     /* Figure out how to flex this so it stays in the same box*/
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     display: flex;
     justify-content: space-between;
     background-color: #305252;
@@ -85,6 +85,9 @@ a {
     max-height: 300px;
     padding: 20px;
 }
+.about-me-section img:hover {
+    border: solid #305252;
+}
 
 .about-me-section img:active {
     -webkit-transform: scale(2,2);
@@ -106,8 +109,21 @@ a {
     margin-right: 80px;
     padding: 20px;
     position: relative; 
-  
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.card-container-2 {
+    max-width: 100%;
+    box-sizing: border-box; 
+    background-color: #488286;
+    margin-left: 20px;
+    margin-right: 80px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 
 .horiseon-card {
@@ -119,19 +135,30 @@ a {
     max-width: 100%;
     max-height: 600px;
     display:block;
+    -webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
     
 }
 
 .cards img{
-    width: 50%;
+    width: 400px;
+    height: 400px;
     display:block;
+    -webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .cards {
     position: relative;
     padding: 10px;
-    width: 50%;
-
+    /* width: 400px; */
+    flex-direction: column;
+    max-width: 33%;
+    flex:auto;
 }
 
 
@@ -142,12 +169,23 @@ a {
     padding: 8px;
     z-index: 2;
     position: absolute;
-    /* box-sizing: border-box; */
     bottom: 50px;
-    /* margin: 55vh;
-    margin: 50vw; */
-    /* width: 50%; */
     
+}
+.horiseon-card img:hover {
+    -webkit-filter: blur(0);
+	filter: blur(0);
+    border-style: solid;
+    border-color: #305252;
+    border-width: 5px;
+}
+
+.cards img:hover {
+    -webkit-filter: blur(0);
+	filter: blur(0);
+    border-style: solid;
+    border-color: #305252;
+    border-width: 5px;
 }
 
 .title-card-container {
@@ -158,7 +196,6 @@ a {
     padding-left: 5px;
     z-index: 2;
     position: absolute;
-    /* box-sizing: border-box; */
     bottom: 30px;
 }
 
@@ -172,76 +209,6 @@ a {
     font-size: 24px;
 }
 
-/* .horiseon-container {
-    flex-direction: column;
-    box-sizing:border-box;
-    position: relative;
-    justify-content: center;
-    }
-
-.horiseon-container img {
-    max-height: 600px;
-    max-width: 700px;
-    display:block;
-    justify-content: center;
-    border:5px;
-    border-color: #488286;
-    border-style:solid;
-    margin-top:30px;
+.footer {
+    text-align: center;
 }
-
-.horiseon-title-card {
-    flex-direction: column;
-    background-color: #b7d5d4;
-    position: absolute;
-    bottom: 10px;
-    margin: 5px;
-    padding:5px;
-    z-index: 2;
-}
-.card-container {
-    width: 100%;
-    display: flex;
-    margin:;
-    }
-
-.portfolio-container {
-    box-sizing:border-box;
-    position: relative;
-    justify-content: center;
-    margin-top:30px;
-    
-    }
-
-.portfolio-title-card {
-    /* display: flex; */
-    /* flex-direction: column;
-    background-color: #b7d5d4;
-    position: absolute;
-    margin-top: 170px;
-    padding:5px;
-    z-index: 2; */
-
-/* .portfolio-container img {
-    max-height: 300px;
-    max-width: 400px;
-    border:5px;
-    border-color: #488286;
-    border-style:solid;
-} */
-
-/* .contact h2{
-    margin-left: 20px; */ */
-    
-
-/* 
-@media screen and (max-width: 768px) {
-    header {
-      flex-direction: column;
-      font-size: 20px;
-    }
-  
-    header nav {
-        order: 2;
-      }
-    
